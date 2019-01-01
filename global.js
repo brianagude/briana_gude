@@ -11,5 +11,4 @@ const makeSpans = selector => {
 
   makeSpans('p, h1, h2')
 
-
 // document.querySelector('h1').innerHTML = 'this works'
