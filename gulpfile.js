@@ -11,16 +11,15 @@ gulp.task('sass', function(){
   return gulp.src('src/css/global.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(cleanCss({
-        compatibility: 'ie8'
-      }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('dist'))
+    // .pipe(cleanCss({
+    //     compatibility: 'ie8'
+    //   }))
+    // .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream())
 })
 
 gulp.task('html', function(){
-  // grab any html and copy & paste it into distr
   return gulp.src('src/*.html')
   .pipe(gulp.dest('dist'))
 })
@@ -28,6 +27,7 @@ gulp.task('html', function(){
 gulp.task('java', function(){
   return gulp.src('src/js/*')
   .pipe(gulp.dest('dist/js'))
+  .pipe(browserSync.stream())
 })
 
 gulp.task('images', function(){

@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,700i");
+html {
+  font-size: 24px; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: 400;
+  line-height: 1.2; }
+
+h1 {
+  font-size: 2.074em;
+  font-weight: 700; }
+
+h2 {
+  font-size: 1.728em; }
+
+h3 {
+  font-size: 1.44em; }
+
+h4 {
+  font-size: 1.2em; }
+
+small, .text_small {
+  font-size: 0.833em; }
+
+h1 span:nth-child(1n) {
+  color: #F92A80; }
+
+h1 span:nth-child(2n) {
+  color: #EF798A; }
+
+h1 span:nth-child(7n-1) {
+  color: #f1d302; }
+
+h1 span:nth-child(4n+1) {
+  color: #235789; }
+
+p span, h2 span, h3 span, h4 span, h5 span {
+  transition: all 30s; }
+
+p span:hover, h2 span:hover, h3 span:hover, h4 span:hover, h5 span:hover {
+  transition: color 0s; }
+
+p span:hover, h2 span:hover, h3 span:hover, h4 span:hover, h5 span:hover {
+  font-size: 30px; }
+
+p span:nth-child(1n):hover, h2 span:nth-child(1n):hover, h3 span:nth-child(1n):hover, h4 span:nth-child(1n):hover, h5 span:nth-child(1n):hover {
+  color: #F92A80; }
+
+p span:nth-child(2n):hover, h2 span:nth-child(2n):hover, h3 span:nth-child(2n):hover, h4 span:nth-child(2n):hover, h5 span:nth-child(2n):hover {
+  color: #EF798A; }
+
+p span:nth-child(7n-1):hover, h2 span:nth-child(7n-1):hover, h3 span:nth-child(7n-1):hover, h4 span:nth-child(7n-1):hover, h5 span:nth-child(7n-1):hover {
+  color: #FF84B7; }
+
+p span:nth-child(4n+1):hover, h2 span:nth-child(4n+1):hover, h3 span:nth-child(4n+1):hover, h4 span:nth-child(4n+1):hover, h5 span:nth-child(4n+1):hover {
+  color: #235789; }
+
+p span:nth-child(5n):hover, h2 span:nth-child(5n):hover, h3 span:nth-child(5n):hover, h4 span:nth-child(5n):hover, h5 span:nth-child(5n):hover {
+  color: #f1d302; }
+
+body {
+  background-color: white;
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  color: #000;
+  cursor: crosshair; }
+
+div.contact {
+  top: 0;
+  right: 0;
+  position: fixed;
+  margin: 20px; }
+  div.contact p, div.contact a {
+    font-size: 0.833em; }
+
+section.main {
+  max-width: 27vw;
+  max-height: 90vh;
+  margin: 50vh auto 0 auto;
+  transform: translateY(-50%); }
+
+section.projects {
+  text-align: center;
+  margin: 0 auto;
+  width: 80vw;
+  margin-bottom: 40px; }
+  section.projects div a {
+    display: block; }
+  section.projects div a, section.projects p, section.projects h1, section.projects h2, section.projects h3, section.projects h4 {
+    margin: 0; }
+  section.projects div {
+    text-align: left;
+    margin: 10px; }
+
+section.show {
+  background-color: yellow;
+  max-width: 500px;
+  text-align: right; }
+
+nav {
+  margin-bottom: 20px; }
+  nav p {
+    margin: 0;
+    font-weight: 700;
+    font-style: italic; }
+  nav a {
+    font-weight: 500; }
+
+@media (max-width: 1000px) {
+  main {
+    max-width: 100vw; }
+    main nav.first {
+      margin-top: 104px; }
+    main a {
+      font-weight: 600; }
+    main p, main a {
+      font-size: 54px; }
+    main h1 {
+      font-size: 74px; }
+    main h2 {
+      font-size: 64px; }
+    main h1 span:nth-child(1n), main h2 span:nth-child(1n) {
+      color: #F92A80; }
+    main h1 span:nth-child(2n), main h2 span:nth-child(2n) {
+      color: #EF798A; }
+    main h1 span:nth-child(7n-1), main h2 span:nth-child(7n-1) {
+      color: #f1d302; }
+    main h1 span:nth-child(4n+1), main h2 span:nth-child(4n+1) {
+      color: #235789; } }
