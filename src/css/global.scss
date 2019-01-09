@@ -11,14 +11,6 @@
 	$blue: #235789;
 
   // animations
-  // @keyframes float {
-  // 50% {transform: translateY(5px);}
-  // 100% {transform: translateY(-5px);}
-  // }
-  @keyframes flip{
-    50% {transform: rotate3d(0, 1, 0, 180deg);}
-    100% {transform: rotate3d(0, 1, 0, 360deg);}
-  }
 
   // mixins
   @mixin colors() {
@@ -47,10 +39,12 @@
     color: black;
     text-decoration: none;
 
-    &:hover{
-      text-decoration:underline;
-    }
+    // &:hover{
+      // text-decoration:underline;
+    // }
   }
+
+
 
   h1, h2, h3, h4, h5, a, .dropbtn {
     margin: 0;
@@ -71,31 +65,42 @@
   h4 {font-size: 1.2em;}
   small, .text_small {font-size: 0.833em;}
 
-  header{
-    display: flex;
-    justify-content: space-between;
-    // align-items: center;
-    // background-color: green;
-
+  a.logo{
     top: 0;
     left: 0;
     position: fixed;
-    padding: 0;
-    margin: 0;
-
-    width: 100vw;
-    height: auto;
-
-    a.logo:hover{animation: flip infinite 3.5s ease;}
 
     img{
       max-height: 25px;
       padding: 0;
       margin: 20px 30px;
     }
+  }
 
-    nav{
-      height: 100%;
+  // header{
+  //   display: flex;
+  //   justify-content: space-between;
+  //
+  //   top: 0;
+  //   left: 0;
+  //   position: fixed;
+  //   padding: 0;
+  //   margin: 0;
+  //
+  //   width: 100vw;
+  //   height: auto;
+  //
+  //   img{
+  //     max-height: 25px;
+  //     padding: 0;
+  //     margin: 20px 30px;
+  //   }
+
+    nav.links{
+      top: 0;
+      right: 0;
+      position: fixed;
+      // height: 100%;
       margin: 20px 30px;
       p, a, .dropbtn {font-size: 0.833em;}
 
@@ -137,16 +142,22 @@
 
       /* Change the background color of the dropdown button when the dropdown content is shown */
       .dropdown:hover .dropbtn {
-        // background-color: #3e8e41;
+        text-decoration: underline;
       }
           }
-  }
+  // }
 
   section.main{
-    max-width: 35vw;
-    max-height: 90vh;
-    margin: 50vh auto 0 auto;
-    transform: translateY(-50%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div{
+      max-width: 30vw;
+    }
 
 
     @include colors();
@@ -169,26 +180,28 @@
 
 
   section.projects {
-    text-align: center;
-    margin: 0 auto;
-    width: 80vw;
-    margin-bottom: 40px;
-
-    h1, h2, h3, h4, h5{
-      span:nth-child(1n){color: $pink1;}
-      span:nth-child(2n){color: $pink2;}
-      span:nth-child(7n-1){color: $pink4;}
-      span:nth-child(4n+1){color: $blue;}
-      span:nth-child(5n){color: $yellow;}
-      span:nth-child(3n+1){font-size: 30px;}
-    }
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 80px 10px;
 
     div a{display: block;}
-    div a, p, h1, h2, h3, h4{margin: 0;}
+    div a, p, h1, h2, h3, h4{margin: 10px;}
     div{
-      text-align: left;
+      text-align: center;
       margin: 10px;
     }
+
+    // h1, h2, h3, h4, h5{
+    //   span:nth-child(1n){color: $pink1;}
+    //   span:nth-child(2n){color: $pink2;}
+    //   span:nth-child(7n-1){color: $pink4;}
+    //   span:nth-child(4n+1){color: $blue;}
+    //   span:nth-child(5n){color: $yellow;}
+    //   span:nth-child(3n+1){font-size: 30px;}
+    // }
   }
 
     // nav {

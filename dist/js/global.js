@@ -18,6 +18,10 @@ function makeSpans (selector) {
 
 makeSpans('p, h1, h2, h3, h4, h5')
 
-// spinning logo
+// animate logo
 
-const logo = document.querySelector('header a.logo')
+// project movement
+const projectlink = document.querySelectorAll('project-list a')
+$(projectlink).on('click', function(){
+  $('div.project-list').css('transform', 'translateX(-100%)')
+})
