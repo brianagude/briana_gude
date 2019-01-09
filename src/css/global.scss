@@ -9,17 +9,50 @@
 	$pink5: #F7A9A8;
 	$yellow: #f1d302;
 	$blue: #235789;
-  $black: #000;
 
-  html {font-size: 24px;}
-
-  a{
-    color: $black;
-    text-decoration: none;
-    &:hover{text-decoration:underline;}
+  // animations
+  // @keyframes float {
+  // 50% {transform: translateY(5px);}
+  // 100% {transform: translateY(-5px);}
+  // }
+  @keyframes flip{
+    50% {transform: rotate3d(0, 1, 0, 180deg);}
+    100% {transform: rotate3d(0, 1, 0, 360deg);}
   }
 
-  h1, h2, h3, h4, h5 {
+  // mixins
+  @mixin colors() {
+    span{transition: all 30s;}
+    span:hover{transition: color 0s;}
+    span:nth-child(1n):hover{color: $pink1;}
+    span:nth-child(2n):hover{color: $pink2;}
+    span:nth-child(7n-1):hover{color: $pink4;}
+    span:nth-child(4n+1):hover{color: $blue;}
+    span:nth-child(5n):hover{color: $yellow;}
+}
+
+  * { margin:0; padding:0; }
+  html {font-size: 24px;}
+  body {
+    background-color: white;
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    color: black;
+    cursor: crosshair;
+  }
+
+  a{
+    color: black;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration:underline;
+    }
+  }
+
+  h1, h2, h3, h4, h5, a, .dropbtn {
     margin: 0;
     font-family: 'Anonymous Pro', monospace;
     font-weight: 400;
@@ -29,6 +62,8 @@
   h1 {
     font-size: 2.074em;
     font-weight: 700;
+
+    @include colors();
   }
 
   h2 {font-size: 1.728em;}
@@ -36,195 +71,132 @@
   h4 {font-size: 1.2em;}
   small, .text_small {font-size: 0.833em;}
 
-  h1{
-    span:nth-child(1n){color: $pink1;}
-    span:nth-child(2n){color: $pink2;}
-    span:nth-child(7n-1){color: $yellow;}
-    span:nth-child(4n+1){color: $blue;}
-  }
+  header{
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    // background-color: green;
 
-  p, h2, h3, h4, h5{
-    span{transition: all 30s;}
-    span:hover{transition: color 0s;}
-    span:hover{font-size: 30px;}
-    span:nth-child(1n):hover{color: $pink1;}
-    span:nth-child(2n):hover{color: $pink2;}
-    span:nth-child(7n-1):hover{color: $pink4;}
-    span:nth-child(4n+1):hover{color: $blue;}
-    span:nth-child(5n):hover{color: $yellow;}
-  }
-
-  body {
-    background-color: white;
-    font-family: 'Anonymous Pro', monospace;
-    font-weight: 400;
-    line-height: 1.2;
-    text-align: center;
-    color: $black;
-
-    cursor: crosshair;
-  }
-
-  div.contact{
     top: 0;
-    right: 0;
+    left: 0;
     position: fixed;
-    margin: 20px;
+    padding: 0;
+    margin: 0;
 
-    p, a{font-size: 0.833em;}
+    width: 100vw;
+    height: auto;
+
+    a.logo:hover{animation: flip infinite 3.5s ease;}
+
+    img{
+      max-height: 25px;
+      padding: 0;
+      margin: 20px 30px;
+    }
+
+    nav{
+      height: 100%;
+      margin: 20px 30px;
+      p, a, .dropbtn {font-size: 0.833em;}
+
+      .dropbtn {border: none;}
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        // background-color: #f1f1f1;
+        // min-width: 160px;
+        // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding-top: 12px;
+        text-decoration: none;
+        text-align:left;
+        display: block;
+        transition: all 1s;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        // background-color: #ddd;
+        text-decoration: underline;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {display: block;}
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        // background-color: #3e8e41;
+      }
+          }
   }
 
   section.main{
-    max-width: 27vw;
+    max-width: 35vw;
     max-height: 90vh;
     margin: 50vh auto 0 auto;
-
-    // position: fixed;
-    // top: 50vh;
-    // left: 50vw;
     transform: translateY(-50%);
-    // background-color: green;
 
-    // display: block;
-  }
+
+    @include colors();
+
+    p, h2, h3, h4, h5{
+      span:hover{font-size: 30px;}
+      margin: 20px;
+      @include colors();
+    }
+
+    h1{
+      span:nth-child(1n){color: $pink1;}
+      span:nth-child(2n){color: $pink2;}
+      span:nth-child(7n-1){color: $pink4;}
+      span:nth-child(4n+1){color: $blue;}
+      span:nth-child(5n){color: $yellow;}
+      span:nth-child(3n+1){font-size: 30px;}
+    }
+}
+
 
   section.projects {
-    // top: 80vh;
     text-align: center;
     margin: 0 auto;
-    // background-color: grey;
     width: 80vw;
-    // position: fixed;
-    // top: 50%;
-    // right: 0;
-    // margin-right: 40px;
-    // transform: translateY(-50%);
+    margin-bottom: 40px;
 
-    // div:nth-child(even){text-align: right;}
+    h1, h2, h3, h4, h5{
+      span:nth-child(1n){color: $pink1;}
+      span:nth-child(2n){color: $pink2;}
+      span:nth-child(7n-1){color: $pink4;}
+      span:nth-child(4n+1){color: $blue;}
+      span:nth-child(5n){color: $yellow;}
+      span:nth-child(3n+1){font-size: 30px;}
+    }
+
     div a{display: block;}
     div a, p, h1, h2, h3, h4{margin: 0;}
     div{
       text-align: left;
       margin: 10px;
     }
-
-    margin-bottom: 40px;
   }
 
-  section.show{
-    // position: fixed;
-    background-color: yellow;
-    max-width: 500px;
-    text-align: right;
-    // right: 0;
-    // top: 50%;
-    // left: 0;
-    // margin-left: 40px;
-    // transform: translateY(-50%);
-
-  }
-
-
-    nav {
-      margin-bottom: 20px;
-      p{
-        margin: 0;
-        font-weight: 700;
-        font-style: italic;
-      }
-      a {
-        font-weight: 500;
-      }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	// p, nav{margin-bottom:30px}
-	// h1{font-size: 40px;}
-	// h2{
-	// 	font-size: 32px;
-	// 	margin:0;
-	// }
-
-	// main{
-	// 	max-width: 30vw;
-	// 	max-height: 90vh;
-	// 	margin: auto;
-	// 	text-align:right;
-	// 	overflow-y:scroll;
-  //
-  //
-	// 	position: fixed;
-	// 	top: 45%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%);
-  //
-	// 	nav{
-	// 		max-width: 100%;
-	// 		display: flex;
-	// 		justify-content: flex-end;
-	// 		align-items: center;
-	// 		flex-wrap:wrap;
-	// 		display:block;
-  //
-	// 		a, p{
-	// 			display:block;
-	// 		}
-  //
-	// 		img{
-	// 			height: 40px;
-	// 			margin-left: 15px;
-	// 			display:none;
-	// 			}
-	// 		}
-  //
-	// 		section{
-	// 			margin-bottom:30px;
-	// 		}
-
-
-// }
-
-	  @media (max-width: 1000px){
-			main{
-				max-width:100vw;
-
-				nav.first{margin-top: 104px;}
-
-				a{font-weight: 600;}
-
-				p, a{font-size:54px;}
-				h1{font-size: 74px;}
-				h2{font-size: 64px;}
-				h1, h2{
-					span:nth-child(1n){color: $pink1;}
-					span:nth-child(2n){color: $pink2;}
-					span:nth-child(7n-1){color: $yellow;}
-					span:nth-child(4n+1){color: $blue;}
-				}
-			}
-
-		}
+    // nav {
+    //   margin-bottom: 20px;
+    //   a {font-weight: 500;}
+    //   p{
+    //     margin: 0;
+    //     font-weight: 700;
+    //     font-style: italic;
+    //   }
+    // }

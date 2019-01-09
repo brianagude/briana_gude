@@ -16,5 +16,8 @@ function makeSpans (selector) {
   })
 }
 
+makeSpans('p, h1, h2, h3, h4, h5')
 
-  makeSpans('p, h1, h2, h3, h4, h5')
+// spinning logo
+
+const logo = document.querySelector('header a.logo')
