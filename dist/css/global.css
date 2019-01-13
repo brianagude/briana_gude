@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Abel|Anonymous+Pro|Coda+Caption:800|Fjalla+One|Questrial");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro|Inconsolata|News+Cycle|Poppins|Questrial|Staatliches|Thasadith|VT323");
 * {
   margin: 0;
   padding: 0; }
@@ -22,8 +23,8 @@ a {
 
 h1, h2, h3, h4, h5, a, .dropbtn {
   margin: 0;
-  font-family: 'Questrial', sans-serif;
-  font-weight: 400;
+  font-family: futura;
+  font-weight: 800;
   line-height: 1.2; }
 
 h1 {
@@ -67,9 +68,10 @@ a.logo {
 
 nav.links {
   top: 0;
-  right: 0;
+  right: 20px;
   position: fixed;
   margin: 20px 30px;
+  text-align: right;
   /* Dropdown Content (Hidden by Default) */
   /* Links inside the dropdown */
   /* Change color of dropdown links on hover */
@@ -90,7 +92,6 @@ nav.links {
     color: black;
     padding-top: 12px;
     text-decoration: none;
-    text-align: left;
     display: block;
     transition: all 1s; }
   nav.links .dropdown-content a:hover {
@@ -107,23 +108,9 @@ section.main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  text-align: right; }
+  text-align: center; }
   section.main div {
-    max-width: 30vw; }
-  section.main span {
-    transition: all 30s; }
-  section.main span:hover {
-    transition: color 0s; }
-  section.main span:nth-child(1n):hover {
-    color: #F92A80; }
-  section.main span:nth-child(2n):hover {
-    color: #EF798A; }
-  section.main span:nth-child(7n-1):hover {
-    color: #FF84B7; }
-  section.main span:nth-child(4n+1):hover {
-    color: #235789; }
-  section.main span:nth-child(5n):hover {
-    color: #f1d302; }
+    max-width: 25vw; }
   section.main p, section.main h1, section.main h2, section.main h3, section.main h4, section.main h5 {
     margin: 20px; }
     section.main p span, section.main h1 span, section.main h2 span, section.main h3 span, section.main h4 span, section.main h5 span {
@@ -139,6 +126,33 @@ section.main {
     section.main p span:nth-child(4n+1):hover, section.main h1 span:nth-child(4n+1):hover, section.main h2 span:nth-child(4n+1):hover, section.main h3 span:nth-child(4n+1):hover, section.main h4 span:nth-child(4n+1):hover, section.main h5 span:nth-child(4n+1):hover {
       color: #235789; }
     section.main p span:nth-child(5n):hover, section.main h1 span:nth-child(5n):hover, section.main h2 span:nth-child(5n):hover, section.main h3 span:nth-child(5n):hover, section.main h4 span:nth-child(5n):hover, section.main h5 span:nth-child(5n):hover {
+      color: #f1d302; }
+
+section.sub {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center; }
+  section.sub div {
+    max-width: 25vw; }
+  section.sub p, section.sub h1, section.sub h2, section.sub h3, section.sub h4, section.sub h5 {
+    margin: 20px; }
+    section.sub p span, section.sub h1 span, section.sub h2 span, section.sub h3 span, section.sub h4 span, section.sub h5 span {
+      transition: all 30s; }
+    section.sub p span:hover, section.sub h1 span:hover, section.sub h2 span:hover, section.sub h3 span:hover, section.sub h4 span:hover, section.sub h5 span:hover {
+      transition: color 0s; }
+    section.sub p span:nth-child(1n):hover, section.sub h1 span:nth-child(1n):hover, section.sub h2 span:nth-child(1n):hover, section.sub h3 span:nth-child(1n):hover, section.sub h4 span:nth-child(1n):hover, section.sub h5 span:nth-child(1n):hover {
+      color: #F92A80; }
+    section.sub p span:nth-child(2n):hover, section.sub h1 span:nth-child(2n):hover, section.sub h2 span:nth-child(2n):hover, section.sub h3 span:nth-child(2n):hover, section.sub h4 span:nth-child(2n):hover, section.sub h5 span:nth-child(2n):hover {
+      color: #EF798A; }
+    section.sub p span:nth-child(7n-1):hover, section.sub h1 span:nth-child(7n-1):hover, section.sub h2 span:nth-child(7n-1):hover, section.sub h3 span:nth-child(7n-1):hover, section.sub h4 span:nth-child(7n-1):hover, section.sub h5 span:nth-child(7n-1):hover {
+      color: #FF84B7; }
+    section.sub p span:nth-child(4n+1):hover, section.sub h1 span:nth-child(4n+1):hover, section.sub h2 span:nth-child(4n+1):hover, section.sub h3 span:nth-child(4n+1):hover, section.sub h4 span:nth-child(4n+1):hover, section.sub h5 span:nth-child(4n+1):hover {
+      color: #235789; }
+    section.sub p span:nth-child(5n):hover, section.sub h1 span:nth-child(5n):hover, section.sub h2 span:nth-child(5n):hover, section.sub h3 span:nth-child(5n):hover, section.sub h4 span:nth-child(5n):hover, section.sub h5 span:nth-child(5n):hover {
       color: #f1d302; }
 
 section.projects {

@@ -18,6 +18,47 @@ function makeSpans (selector) {
 
 makeSpans('p, h1, h2, h3, h4, h5')
 
+// new mouse
+const cursor = document.querySelector('div.cursor')
+let isMouseDown = false
+
+const grow = function(){
+  cursor.classList.add('is-down')
+}
+
+const shrink = function(){
+   cursor.classList.remove('is-down')
+}
+
+const moveCursor = function(x, y){
+  cursor.style.left = x + 'px'
+  cursor.style.top = y + 'px'
+}
+
+document.addEventListener('mousedown', function(event){
+  isMouseDown = true
+  grow()
+})
+
+document.addEventListener('mouseup', function(){
+  isMouseDown = false
+  shrink()
+})
+
+document.addEventListener('mousemove', function(event){
+  moveCursor(event.pageX, event.pageY)
+  // console.log(event)
+})
+
+$('a').on('mouseenter', function(){
+  $('.cursor').addClass('is-down')
+})
+
+$('a').on('mouseleave', function(){
+  $('.cursor').removeClass('is-down')
+})
+
+
 // animate logo
 
 // project movement
