@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Abel|Anonymous+Pro|Coda+Caption:800|Fjalla+One|Questrial");
 * {
   margin: 0;
   padding: 0; }
@@ -21,7 +22,7 @@ a {
 
 h1, h2, h3, h4, h5, a, .dropbtn {
   margin: 0;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Questrial', sans-serif;
   font-weight: 400;
   line-height: 1.2; }
 
@@ -105,7 +106,8 @@ section.main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  text-align: right; }
   section.main div {
     max-width: 30vw; }
   section.main span {
@@ -122,36 +124,22 @@ section.main {
     color: #235789; }
   section.main span:nth-child(5n):hover {
     color: #f1d302; }
-  section.main p, section.main h2, section.main h3, section.main h4, section.main h5 {
+  section.main p, section.main h1, section.main h2, section.main h3, section.main h4, section.main h5 {
     margin: 20px; }
-    section.main p span:hover, section.main h2 span:hover, section.main h3 span:hover, section.main h4 span:hover, section.main h5 span:hover {
-      font-size: 30px; }
-    section.main p span, section.main h2 span, section.main h3 span, section.main h4 span, section.main h5 span {
+    section.main p span, section.main h1 span, section.main h2 span, section.main h3 span, section.main h4 span, section.main h5 span {
       transition: all 30s; }
-    section.main p span:hover, section.main h2 span:hover, section.main h3 span:hover, section.main h4 span:hover, section.main h5 span:hover {
+    section.main p span:hover, section.main h1 span:hover, section.main h2 span:hover, section.main h3 span:hover, section.main h4 span:hover, section.main h5 span:hover {
       transition: color 0s; }
-    section.main p span:nth-child(1n):hover, section.main h2 span:nth-child(1n):hover, section.main h3 span:nth-child(1n):hover, section.main h4 span:nth-child(1n):hover, section.main h5 span:nth-child(1n):hover {
+    section.main p span:nth-child(1n):hover, section.main h1 span:nth-child(1n):hover, section.main h2 span:nth-child(1n):hover, section.main h3 span:nth-child(1n):hover, section.main h4 span:nth-child(1n):hover, section.main h5 span:nth-child(1n):hover {
       color: #F92A80; }
-    section.main p span:nth-child(2n):hover, section.main h2 span:nth-child(2n):hover, section.main h3 span:nth-child(2n):hover, section.main h4 span:nth-child(2n):hover, section.main h5 span:nth-child(2n):hover {
+    section.main p span:nth-child(2n):hover, section.main h1 span:nth-child(2n):hover, section.main h2 span:nth-child(2n):hover, section.main h3 span:nth-child(2n):hover, section.main h4 span:nth-child(2n):hover, section.main h5 span:nth-child(2n):hover {
       color: #EF798A; }
-    section.main p span:nth-child(7n-1):hover, section.main h2 span:nth-child(7n-1):hover, section.main h3 span:nth-child(7n-1):hover, section.main h4 span:nth-child(7n-1):hover, section.main h5 span:nth-child(7n-1):hover {
+    section.main p span:nth-child(7n-1):hover, section.main h1 span:nth-child(7n-1):hover, section.main h2 span:nth-child(7n-1):hover, section.main h3 span:nth-child(7n-1):hover, section.main h4 span:nth-child(7n-1):hover, section.main h5 span:nth-child(7n-1):hover {
       color: #FF84B7; }
-    section.main p span:nth-child(4n+1):hover, section.main h2 span:nth-child(4n+1):hover, section.main h3 span:nth-child(4n+1):hover, section.main h4 span:nth-child(4n+1):hover, section.main h5 span:nth-child(4n+1):hover {
+    section.main p span:nth-child(4n+1):hover, section.main h1 span:nth-child(4n+1):hover, section.main h2 span:nth-child(4n+1):hover, section.main h3 span:nth-child(4n+1):hover, section.main h4 span:nth-child(4n+1):hover, section.main h5 span:nth-child(4n+1):hover {
       color: #235789; }
-    section.main p span:nth-child(5n):hover, section.main h2 span:nth-child(5n):hover, section.main h3 span:nth-child(5n):hover, section.main h4 span:nth-child(5n):hover, section.main h5 span:nth-child(5n):hover {
+    section.main p span:nth-child(5n):hover, section.main h1 span:nth-child(5n):hover, section.main h2 span:nth-child(5n):hover, section.main h3 span:nth-child(5n):hover, section.main h4 span:nth-child(5n):hover, section.main h5 span:nth-child(5n):hover {
       color: #f1d302; }
-  section.main h1 span:nth-child(1n) {
-    color: #F92A80; }
-  section.main h1 span:nth-child(2n) {
-    color: #EF798A; }
-  section.main h1 span:nth-child(7n-1) {
-    color: #FF84B7; }
-  section.main h1 span:nth-child(4n+1) {
-    color: #235789; }
-  section.main h1 span:nth-child(5n) {
-    color: #f1d302; }
-  section.main h1 span:nth-child(3n+1) {
-    font-size: 30px; }
 
 section.projects {
   width: 100vw;
@@ -165,5 +153,5 @@ section.projects {
   section.projects div a, section.projects p, section.projects h1, section.projects h2, section.projects h3, section.projects h4 {
     margin: 10px; }
   section.projects div {
-    text-align: center;
+    text-align: right;
     margin: 10px; }
