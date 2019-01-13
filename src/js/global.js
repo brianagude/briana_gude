@@ -1,3 +1,5 @@
+//  text effect
+
 'use strict'
 
 function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr) }
@@ -18,51 +20,22 @@ function makeSpans (selector) {
 
 makeSpans('p, h1, h2, h3, h4, h5')
 
-// new mouse
-const cursor = document.querySelector('div.cursor')
-let isMouseDown = false
 
-const grow = function(){
-  cursor.classList.add('is-down')
-}
-
-const shrink = function(){
-   cursor.classList.remove('is-down')
-}
-
-const moveCursor = function(x, y){
-  cursor.style.left = x + 'px'
-  cursor.style.top = y + 'px'
-}
-
-document.addEventListener('mousedown', function(event){
-  isMouseDown = true
-  grow()
-})
-
-document.addEventListener('mouseup', function(){
-  isMouseDown = false
-  shrink()
-})
-
-document.addEventListener('mousemove', function(event){
-  moveCursor(event.pageX, event.pageY)
-  // console.log(event)
-})
-
-$('a').on('mouseenter', function(){
-  $('.cursor').addClass('is-down')
-})
-
-$('a').on('mouseleave', function(){
-  $('.cursor').removeClass('is-down')
-})
+// change elements on scroll
 
 
-// animate logo
+document.addEventListener('scroll', function() {
+  const pixels = window.pageYOffset
+  const sections = document.querySelectorAll('section.projects')
+  const topic = document.querySelector('div.topic h4')
+  const title = document.querySelector('div.title')
+  const desc = document.querySelector('div.desc')
 
-// project movement
-const projectlink = document.querySelectorAll('project-list a')
-$(projectlink).on('click', function(){
-  $('div.project-list').css('transform', 'translateX(-100%)')
+  sections.forEach(section => {
+    if (section.offsetTop - 200 <= pixels){
+      topic.innerHTML = section.getAttribute('data-topic')
+      title.innerHTML = section.getAttribute('data-title')
+      desc.innerHTML = section.getAttribute('data-desc')
+    }
+  })
 })
