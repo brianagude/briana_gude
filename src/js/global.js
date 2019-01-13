@@ -28,7 +28,7 @@ document.addEventListener('scroll', function() {
   const pixels = window.pageYOffset
   const sections = document.querySelectorAll('section.projects')
   const topic = document.querySelector('div.topic h4')
-  const title = document.querySelector('div.title')
+  const title = document.querySelector('div.title h4')
   const desc = document.querySelector('div.desc')
 
   sections.forEach(section => {
