@@ -7,8 +7,7 @@ html {
   font-size: 24px; }
 
 body {
-  background-color: white;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
@@ -21,24 +20,72 @@ a {
   a:hover {
     text-decoration: line-through; }
 
-h1, h2, h3, h4, h5, a, .dropbtn {
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+.dropbtn {
   margin: 0;
   font-family: futura;
   font-weight: 700;
   line-height: 1.2; }
-  h1 span, h2 span, h3 span, h4 span, h5 span, a span, .dropbtn span {
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span,
+  a span,
+  .dropbtn span {
     transition: all 30s; }
-  h1 span:hover, h2 span:hover, h3 span:hover, h4 span:hover, h5 span:hover, a span:hover, .dropbtn span:hover {
+  h1 span:hover,
+  h2 span:hover,
+  h3 span:hover,
+  h4 span:hover,
+  h5 span:hover,
+  a span:hover,
+  .dropbtn span:hover {
     transition: color 0s; }
-  h1 span:nth-child(1n):hover, h2 span:nth-child(1n):hover, h3 span:nth-child(1n):hover, h4 span:nth-child(1n):hover, h5 span:nth-child(1n):hover, a span:nth-child(1n):hover, .dropbtn span:nth-child(1n):hover {
-    color: #F92A80; }
-  h1 span:nth-child(2n):hover, h2 span:nth-child(2n):hover, h3 span:nth-child(2n):hover, h4 span:nth-child(2n):hover, h5 span:nth-child(2n):hover, a span:nth-child(2n):hover, .dropbtn span:nth-child(2n):hover {
-    color: #EF798A; }
-  h1 span:nth-child(7n-1):hover, h2 span:nth-child(7n-1):hover, h3 span:nth-child(7n-1):hover, h4 span:nth-child(7n-1):hover, h5 span:nth-child(7n-1):hover, a span:nth-child(7n-1):hover, .dropbtn span:nth-child(7n-1):hover {
-    color: #FF84B7; }
-  h1 span:nth-child(4n+1):hover, h2 span:nth-child(4n+1):hover, h3 span:nth-child(4n+1):hover, h4 span:nth-child(4n+1):hover, h5 span:nth-child(4n+1):hover, a span:nth-child(4n+1):hover, .dropbtn span:nth-child(4n+1):hover {
+  h1 span:nth-child(1n):hover,
+  h2 span:nth-child(1n):hover,
+  h3 span:nth-child(1n):hover,
+  h4 span:nth-child(1n):hover,
+  h5 span:nth-child(1n):hover,
+  a span:nth-child(1n):hover,
+  .dropbtn span:nth-child(1n):hover {
+    color: #f92a80; }
+  h1 span:nth-child(2n):hover,
+  h2 span:nth-child(2n):hover,
+  h3 span:nth-child(2n):hover,
+  h4 span:nth-child(2n):hover,
+  h5 span:nth-child(2n):hover,
+  a span:nth-child(2n):hover,
+  .dropbtn span:nth-child(2n):hover {
+    color: #ef798a; }
+  h1 span:nth-child(7n-1):hover,
+  h2 span:nth-child(7n-1):hover,
+  h3 span:nth-child(7n-1):hover,
+  h4 span:nth-child(7n-1):hover,
+  h5 span:nth-child(7n-1):hover,
+  a span:nth-child(7n-1):hover,
+  .dropbtn span:nth-child(7n-1):hover {
+    color: #ff84b7; }
+  h1 span:nth-child(4n + 1):hover,
+  h2 span:nth-child(4n + 1):hover,
+  h3 span:nth-child(4n + 1):hover,
+  h4 span:nth-child(4n + 1):hover,
+  h5 span:nth-child(4n + 1):hover,
+  a span:nth-child(4n + 1):hover,
+  .dropbtn span:nth-child(4n + 1):hover {
     color: #235789; }
-  h1 span:nth-child(5n):hover, h2 span:nth-child(5n):hover, h3 span:nth-child(5n):hover, h4 span:nth-child(5n):hover, h5 span:nth-child(5n):hover, a span:nth-child(5n):hover, .dropbtn span:nth-child(5n):hover {
+  h1 span:nth-child(5n):hover,
+  h2 span:nth-child(5n):hover,
+  h3 span:nth-child(5n):hover,
+  h4 span:nth-child(5n):hover,
+  h5 span:nth-child(5n):hover,
+  a span:nth-child(5n):hover,
+  .dropbtn span:nth-child(5n):hover {
     color: #f1d302; }
 
 h1 {
@@ -54,7 +101,8 @@ h3 {
 h4 {
   font-size: 1.2em; }
 
-small, .text_small {
+small,
+.text_small {
   font-size: 0.833em; }
 
 header {
@@ -72,19 +120,21 @@ header {
     header div h4 span:hover {
       transition: color 0s; }
     header div h4 span:nth-child(1n):hover {
-      color: #F92A80; }
+      color: #f92a80; }
     header div h4 span:nth-child(2n):hover {
-      color: #EF798A; }
+      color: #ef798a; }
     header div h4 span:nth-child(7n-1):hover {
-      color: #FF84B7; }
-    header div h4 span:nth-child(4n+1):hover {
+      color: #ff84b7; }
+    header div h4 span:nth-child(4n + 1):hover {
       color: #235789; }
     header div h4 span:nth-child(5n):hover {
       color: #f1d302; }
   header nav {
     margin: 20px 20px 40px 20px;
     text-align: right; }
-    header nav p, header nav a, header nav .dropbtn {
+    header nav p,
+    header nav a,
+    header nav .dropbtn {
       font-size: 0.833em; }
     header nav .dropbtn {
       border: none; }
@@ -134,7 +184,8 @@ section.projects {
     align-items: center;
     flex-wrap: wrap;
     width: 50%; }
-    section.projects div.half h3, section.projects div.half p {
+    section.projects div.half h3,
+    section.projects div.half p {
       margin: 0; }
   section.projects div.content {
     display: flex;
@@ -146,6 +197,16 @@ section.projects {
     section.projects div.content img {
       max-width: 600px;
       margin: 20px; }
+  section.projects div.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%; }
+    section.projects div.contact a {
+      display: block;
+      width: 100%;
+      margin: 5px; }
 
 footer {
   display: flex;
@@ -159,5 +220,6 @@ footer {
     align-items: center;
     width: 90%;
     height: 40px; }
-    footer div h2, footer div a {
+    footer div h2,
+    footer div a {
       font-size: 0.833em; }

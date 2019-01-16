@@ -22,8 +22,6 @@ makeSpans('p, h1, h2, h3, h4, h5')
 
 
 // change elements on scroll
-
-
 document.addEventListener('scroll', function() {
   const pixels = window.pageYOffset
   const sections = document.querySelectorAll('section.projects')
