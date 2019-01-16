@@ -1,0 +1,31 @@
+{
+  "name": "brianagude",
+  "version": "1.0.0",
+  "description": "briana gude portfolio",
+  "main": "global.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "imagemin": "^6.1.0",
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianalauren/brianagude.git"
+  },
+  "author": "briana gude",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianalauren/brianagude/issues"
+  },
+  "homepage": "https://github.com/brianalauren/brianagude#readme"
+}
