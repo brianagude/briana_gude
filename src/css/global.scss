@@ -113,8 +113,8 @@ header {
   left: 0;
   position: fixed;
   width: 100%;
-  div h4 {
-    @include colors();
+  div.topic h4 {
+    font-size: 0.833em;
     margin: 10px 20px 40px 20px;
   }
 

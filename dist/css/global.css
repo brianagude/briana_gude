@@ -113,22 +113,9 @@ header {
   left: 0;
   position: fixed;
   width: 100%; }
-  header div h4 {
+  header div.topic h4 {
+    font-size: 0.833em;
     margin: 10px 20px 40px 20px; }
-    header div h4 span {
-      transition: all 30s; }
-    header div h4 span:hover {
-      transition: color 0s; }
-    header div h4 span:nth-child(1n):hover {
-      color: #f92a80; }
-    header div h4 span:nth-child(2n):hover {
-      color: #ef798a; }
-    header div h4 span:nth-child(7n-1):hover {
-      color: #ff84b7; }
-    header div h4 span:nth-child(4n + 1):hover {
-      color: #235789; }
-    header div h4 span:nth-child(5n):hover {
-      color: #f1d302; }
   header nav {
     margin: 20px 20px 40px 20px;
     text-align: right; }
