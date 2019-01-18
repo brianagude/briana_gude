@@ -174,7 +174,7 @@ section.copy {
 }
 
 section.projects {
-  @include flex(space-between);
+  @include flex(center);
   margin-left: 33.333vw;
   min-height: 100vh;
   max-height: 100%;
@@ -203,14 +203,24 @@ section.projects {
     }
   }
 
-  div.contact {
+  div.services {
     @include flex(center);
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    a {
-      display: block;
-      width: 100%;
-      margin: 5px;
+
+    ul:first-child {
+      font-weight: 700;
+    }
+
+    ul {
+      list-style: none;
+      text-align: center;
+      margin: 10px 24px 0 24px;
+
+      li {
+        margin: 10px 0;
+      }
     }
   }
 }
