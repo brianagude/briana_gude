@@ -45,6 +45,12 @@ $blue: #235789;
   pointer-events: none;
 }
 
+@mixin mq() {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -81,6 +87,7 @@ a,
 .dropbtn {
   margin: 0;
   font-family: futura;
+  background: none;
 
   font-weight: 700;
   line-height: 1.2;
@@ -182,7 +189,8 @@ section.projects {
   border-left: 10px solid black;
 
   // background-color: blue;
-  div.half {
+  div.half,
+  div.half2 {
     @include flex(center);
     flex-wrap: wrap;
     width: 50%;
@@ -237,6 +245,106 @@ footer {
     h2,
     a {
       font-size: 0.833em;
+    }
+  }
+}
+
+@include mq() {
+  body {
+    cursor: none;
+  }
+
+  section.copy {
+    @include flex(center);
+    @include pointer();
+    // border: 10px solid black;
+    background-color: rgba(0, 0, 0, 0);
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    div {
+      max-width: 300px;
+      opacity: 0.7;
+    }
+    // background-color: orange;
+  }
+
+  section.projects {
+    @include flex(center);
+    margin: auto;
+    min-height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    border-left: none;
+
+    // background-color: blue;
+    div.half {
+      @include flex(center);
+      flex-wrap: wrap;
+      width: 100%;
+      h3,
+      p {
+        margin: auto;
+      }
+    }
+
+    div.half2 {
+      display: none;
+    }
+
+    div.content {
+      @include flex(center);
+      flex-wrap: wrap;
+      width: 100%;
+      padding-bottom: 40px;
+      img {
+        max-width: 80%;
+        margin: 20px;
+      }
+    }
+
+    div.services {
+      @include flex(center);
+      align-items: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+
+      ul:first-child {
+        font-weight: 700;
+      }
+
+      ul {
+        list-style: none;
+        text-align: center;
+        margin: 10px 24px 0 24px;
+
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    @include flex(center);
+    border-top: 10px solid black;
+    padding: 10px 0;
+    div {
+      @include flex(space-between);
+      width: 90%;
+      height: 40px;
+
+      h2,
+      a {
+        font-size: 0.833em;
+      }
     }
   }
 }
