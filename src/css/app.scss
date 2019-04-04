@@ -206,7 +206,7 @@ section.projects {
     width: 100%;
     padding-bottom: 40px;
     img {
-      max-width: 600px;
+      max-width: 400px;
       margin: 20px;
     }
   }
@@ -348,54 +348,3 @@ footer {
     }
   }
 }
-
-// section.lines {
-//   border: black solid 10px;
-//   position: fixed;
-//   z-index: 5;
-//   height: 100vh;
-//   width: 100vw;
-//
-//   div.line1 {
-//     border-left: 10px solid #000;
-//     height: 100%;
-//     position: fixed;
-//     left: 33.333%;
-//     top: 0;
-//   }
-//
-//   div.line2 {
-//     border-left: 10px solid #000;
-//     height: 100%;
-//     position: fixed;
-//     right: 33.333%;
-//     // margin-left: -3px;
-//     top: 0;
-//   }
-//
-//   div.line3 {
-//     border-bottom: 10px solid #000;
-//     height: 1px;
-//     width: 100%;
-//     position: fixed;
-//     top: 50%;
-//     left: 0;
-//   }
-// }
-//
-// section.grid-container {
-//   display: grid;
-//   grid-template-columns: 33vw 33vw 33vw;
-//   grid-gap: 10px;
-//   background-color: pink;
-//   border: none;
-//   // padding: 10px;
-//   height: 100vh;
-//
-//   div {
-//     background-color: #fff;
-//     text-align: center;
-//     padding: 20px 0;
-//     font-size: 30px;
-//   }
-// }

@@ -19,7 +19,7 @@ gulp.task("clean:dist", function() {
 
 gulp.task("sass", function() {
   return gulp
-    .src("src/css/global.scss")
+    .src("src/css/*")
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(

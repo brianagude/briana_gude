@@ -24,6 +24,7 @@ body {
 a {
   color: black;
   text-decoration: none;
+  font-weight: bold;
   // padding-bottom: 1px;
 
   // border-bottom: 1px solid black;
@@ -32,9 +33,20 @@ a {
   }
 }
 
+p {
+  font-weight: 300;
+}
+
 p,
 nav {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bolder;
+  margin-bottom: 36px;
 }
 h1 {
   font-size: 40px;
@@ -112,6 +124,16 @@ main {
     span:nth-child(5n):hover {
       color: $yellow;
     }
+  }
+}
+
+main.projects {
+  a {
+    font-weight: normal;
+  }
+
+  nav a {
+    font-weight: bold;
   }
 }
 
