@@ -131,35 +131,38 @@ main {
 main.projects {
   a {
     font-weight: normal;
+    text-decoration: underline;
   }
 
   nav a {
     font-weight: bold;
+    text-decoration: none;
   }
 }
 
 @media (max-width: 1000px) {
   main {
     max-width: 100vw;
+    margin-top: 24px;
 
     nav.first {
       margin-top: 104px;
     }
 
-    a {
-      font-weight: 600;
-    }
-
-    p,
-    a {
-      font-size: 54px;
-    }
-    h1 {
-      font-size: 74px;
-    }
-    h2 {
-      font-size: 64px;
-    }
+    // a {
+    //   font-weight: 600;
+    // }
+    //
+    // p,
+    // a {
+    //   font-size: 54px;
+    // }
+    // h1 {
+    //   font-size: 74px;
+    // }
+    // h2 {
+    //   font-size: 64px;
+    // }
     h1,
     h2 {
       span:nth-child(1n) {
