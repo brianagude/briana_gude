@@ -58,14 +58,14 @@ h2 {
 
 main {
   width: 30vw;
-  height: 90vh;
+  height: auto;
   margin: auto;
   text-align: right;
   overflow-y: scroll;
   cursor: crosshair;
 
   position: fixed;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
