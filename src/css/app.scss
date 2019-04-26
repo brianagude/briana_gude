@@ -57,6 +57,22 @@ section {
   }
 }
 
+.intro,
+.history {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  h3 {
+    line-height: 1.25;
+  }
+
+  div {
+    height: auto;
+    width: 80%;
+  }
+}
+
 .menu {
   margin: 0;
   border-right: 1.5px solid rgba(0, 0, 0, 0.4);
@@ -85,13 +101,12 @@ section {
   }
 }
 
-.intro {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  div {
-    height: auto;
-    width: 80%;
+.work,
+.projects {
+  h1 {
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.4);
   }
 }
