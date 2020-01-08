@@ -1,3 +1,4 @@
+  // add span tags around each letter
   const makeSpans = selector => {
     const [...elements] = document.querySelectorAll(selector)
     return elements.map(element => {

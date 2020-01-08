@@ -1,3 +1,4 @@
+// utils
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,700i|IBM+Plex+Mono:400,600,600i,700,700i|Source+Code+Pro:400,700,900|Space+Mono:400,700,700i");
 
 // 	font-family: 'Source Code Pro', monospace;
@@ -6,35 +7,58 @@
 // 	font-family: 'IBM Plex Mono', monospace;
 
 // colors
-$pink1: #f92a80;
-$pink2: #ef798a;
-$pink3: #f7d1e1;
-$pink4: #ff84b7;
-$pink5: #f7a9a8;
-$yellow: #f1d302;
-$blue: #235789;
+
+// pinks
+// $color-1: #f92a80;
+// $color-2: #ef798a;
+// $color-3: #f7d1e1;
+// $color-4: #ff84b7;
+
+// og
+// $color-1: #ef798a;
+// $color-2: #f92a80;
+// $color-3: #f1d302;
+// $color-4: #235789;
+
+// blu-green
+$color-1: #ecff20;
+$color-2: #3fb2e0;
+$color-3: #eafeca;
+$color-4: #13a155;
+
+// orange-crush
+// $color-1: #f8a561;
+// $color-2: #fe856a;
+// $color-3: #f1dcc8;
+// $color-4: #e4f7cc;
+
+
+// page styles
 
 body {
   font-family: "Anonymous Pro", monospace;
   font-size: 24px;
   cursor: crosshair;
-  overflow: hidden;
+
+  @media (max-width: 350px){
+    font-size: 22px;
+  }
 }
 
 a {
   color: black;
   text-decoration: none;
   font-weight: bold;
-  // padding-bottom: 1px;
 
-  // border-bottom: 1px solid black;
-  &:hover {
-    text-decoration: underline;
-  }
+  &:hover { text-decoration: underline; }
 }
 
-p {
-  font-weight: 300;
+p { font-weight: 300; }
+h2 { font-size: 32px; }
+
+h1 { 
+  font-size: 40px;
+  margin-top: 24px;
 }
 
 p,
@@ -48,127 +72,34 @@ h3 {
   font-weight: bolder;
   margin-bottom: 36px;
 }
-h1 {
-  font-size: 40px;
-}
-h2 {
-  font-size: 32px;
-  margin: 0;
-}
 
-main {
-  width: 30vw;
-  height: auto;
-  margin: auto;
-  text-align: right;
-  overflow-y: scroll;
-  cursor: crosshair;
+.info, .projects {
+  padding: 0 32px;
+  max-width: 384px;
 
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transform-origin: center; 
 
-  nav {
-    max-width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-    display: block;
-
-    a,
-    p {
-      display: block;
-    }
-
-    img {
-      height: 40px;
-      margin-left: 15px;
-      display: none;
-    }
-  }
-
-  section {
-    margin-bottom: 30px;
-
-    a {
-      display: block;
-      margin: 30px 0;
-    }
-  }
-
-  p,
-  h1,
-  h2 {
-    span {
-      transition: color 15s;
-    }
-
-    span:hover {
-      transition: color 0s;
-    }
-    span:nth-child(1n):hover {
-      color: $pink1;
-    }
-    span:nth-child(2n):hover {
-      color: $pink2;
-    }
-    // span:nth-child(7n-1):hover{color: $pink3;}
-    span:nth-child(7n-1):hover {
-      color: $pink4;
-    }
-    // span:nth-child(1n):hover{color: $pink5;}
-    span:nth-child(4n + 1):hover {
-      color: $blue;
-    }
-    span:nth-child(5n):hover {
-      color: $yellow;
-    }
-  }
+  text-align: right;
 }
 
-main.projects {
-  a {
-    font-weight: normal;
-    text-decoration: underline;
-  }
-
-  nav a {
-    font-weight: bold;
-    text-decoration: none;
-  }
+.links a {
+  display: block;
+  margin-bottom: 16px;
+  text-decoration: underline;
 }
 
-@media (max-width: 1000px) {
-  main {
-    width: 60vw;
-    margin-top: 24px;
+// text effect
+span {
+  transition: color 15s;
+  &:hover {transition: 0s; }
 
-    nav.first {
-      margin-top: 104px;
-    }
-
-    h1,
-    h2 {
-      span:nth-child(1n) {
-        color: $pink1;
-      }
-      span:nth-child(2n) {
-        color: $pink2;
-      }
-      span:nth-child(7n-1) {
-        color: $yellow;
-      }
-      span:nth-child(4n + 1) {
-        color: $blue;
-      }
-    }
-  }
+  &:nth-child(1n):hover { color: $color-1; }
+  &:nth-child(2n):hover { color: $color-2; }
+  &:nth-child(4n + 1):hover { color: $color-3; }
+  &:nth-child(5n):hover { color: $color-4; }
 }
 
-@media (max-width: 800px) {
-  main {
-    width: 90vw;
-  }
-}

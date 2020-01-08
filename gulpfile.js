@@ -22,6 +22,11 @@ gulp.task("sass", function() {
     .src("src/css/*")
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .on('error', function (err) {
+      console.log(err.toString());
+
+      this.emit('end');
+    })
     .pipe(
       cleanCss({
         compatibility: "ie8"
@@ -56,6 +61,7 @@ gulp.task("watch", function() {
       baseDir: "dist"
     }
   });
+  
   gulp.watch("src/*.html", ["html"]).on("change", browserSync.reload);
   gulp.watch("src/css/global.scss", ["sass"]).on("change", browserSync.reload);
   gulp.watch("src/css/app.scss", ["sass"]).on("change", browserSync.reload);
