@@ -9,10 +9,10 @@
 // colors
 
 // pinks
-$color-1: #f92a80;
-$color-2: #ef798a;
-$color-3: #f7d1e1;
-$color-4: #ff84b7;
+// $color-1: #f92a80;
+// $color-2: #ef798a;
+// $color-3: #f7d1e1;
+// $color-4: #ff84b7;
 
 // og
 // $color-1: #ef798a;
@@ -21,10 +21,10 @@ $color-4: #ff84b7;
 // $color-4: #235789;
 
 // blu-green
-// $color-1: #ecff20;
-// $color-2: #3fb2e0;
-// $color-3: #eafeca;
-// $color-4: #13a155;
+$color-1: #ecff20;
+$color-2: #3fb2e0;
+$color-3: #eafeca;
+$color-4: #13a155;
 
 // orange-crush
 // $color-1: #f8a561;
@@ -49,6 +49,7 @@ a {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 
   &:hover { text-decoration: underline; }
 }
