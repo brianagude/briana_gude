@@ -18,7 +18,7 @@ const colors = [
 const random = Math.floor(Math.random() * colors.length)
 
 context.strokeStyle = colors[random]
-context.lineWidth = 5
+context.lineWidth = 10
 context.lineCap = 'round'
 
 let painting = false
