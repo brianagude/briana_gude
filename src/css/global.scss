@@ -125,9 +125,9 @@ span {
 
 // paintbox
 canvas { 
-  @media (max-width: 700px) {
-    display: none;
-  }
+  // @media (max-width: 700px) {
+  //   display: none;
+  // }
   
   position: fixed;
   top: 0;
