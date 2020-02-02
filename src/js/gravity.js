@@ -33,48 +33,48 @@ const renderer = Matter.Render.create({
 const create = function (x, y) {
   const random = Math.random()
 
-  //   if (random > 0.5){
-  return Bodies.rectangle(x, y, 38, 50, {
-    frictionAir: 0.05,
-    render: {
-      sprite: {
-        texture: 'img/favicon.png',
-        xScale: 0.5,
-        yScale: 0.5
-      }
-    },
-    //     plugin: {
-    //       wrap: {
-    //         min: {x: 0,y: 0},
-    //         max: {x: w, y: h}
-    //       }
-    //   }
-  })
-  //   } else {
-  //     return Bodies.circle(x, y, 25,{
-  //     frictionAir: 0.05,
-  //     render: {
-  //       sprite: {
-  //         texture: 'ball.png', 
-  //         xScale: 0.5, 
-  //         yScale: 0.5
-  //       }
-  //     }, 
-  //     plugin: {
-  //       wrap: {
-  //         min: {x: 0,y: 0},
-  //         max: {x: w, y: h}
-  //       }
-  //   }
-  //   })
-  //   }
+    if (random > 0.5){
+      return Bodies.rectangle(x, y, 38, 50, {
+        frictionAir: 0.05,
+        render: {
+          sprite: {
+            texture: 'img/favicon.png',
+            xScale: 1,
+            yScale: 1
+          }
+        },
+            plugin: {
+              wrap: {
+                min: {x: 0, y: 0},
+                max: {x: w, y: h}
+              }
+          }
+      })
+    } else {
+      return Bodies.circle(x, y, 25,{
+      frictionAir: 0.05,
+      render: {
+        sprite: {
+          texture: 'img/memoji.png', 
+          xScale: 0.5, 
+          yScale: 0.5
+        }
+      }, 
+      plugin: {
+        wrap: {
+          min: {x: 0, y: 0},
+          max: {x: w, y: h}
+        }
+    }
+    })
+  }
 
 }
 
 const bigBall = Bodies.circle(w / 2, h / 2, Math.min(w / 4, h / 4), {
   isStatic: true,
   render: {
-    fillStyle: '#fff'
+    fillStyle: '#000'
   }
 })
 
@@ -98,13 +98,13 @@ const initialShapes = Composites.stack(50, 50, 15, 5, 40, 40, function (x, y) {
 })
 
 World.add(engine.world, [
-  bigBall,
+  // bigBall,
   ground,
   ceiling,
   leftWall,
   rightWall,
   mouse,
-  initialShapes,
+  // initialShapes,
 
 ])
 
