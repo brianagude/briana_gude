@@ -38,7 +38,6 @@ $color-4: #235789;
 body {
   font-family: "Anonymous Pro", monospace;
   font-size: 24px;
-
   cursor: crosshair;
 
   -webkit-touch-callout: none;
@@ -123,15 +122,12 @@ span {
   &:nth-child(5n):hover { color: $color-4; }
 }
 
-// paintbox
-canvas { 
-  // @media (max-width: 700px) {
-  //   display: none;
-  // }
-  
-  position: fixed;
-  top: 0;
-  left: 0;
+@media (max-width: 768px) {
+  .shapes { display: none; }
+}
+
+@media (min-width: 768px) {
+  .paintbox { display: none; }
 }
 
 
