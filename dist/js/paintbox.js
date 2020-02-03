@@ -44,6 +44,7 @@ document.addEventListener('touchstart', function(event){
   painting = true
   context.moveTo(event.X, event.pageY)
   context.beginPath()
+  event.preventDefault()
 })
 
 document.addEventListener('touchend', function(event){
@@ -52,6 +53,7 @@ document.addEventListener('touchend', function(event){
 
 document.addEventListener('touchmove', function(event){
   if (painting){
+    // event.preventDefault()
     context.lineTo(event.pageX, event.pageY)
     context.stroke()
   } 
