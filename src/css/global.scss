@@ -40,6 +40,7 @@
 // page styles ---------------------------------------------------------------------------
 
 body {
+  padding: 16px;
   font-family: "Anonymous Pro", monospace;
   font-size: 24px;
   cursor: crosshair;
@@ -88,7 +89,6 @@ h3 {
 }
 
 .wrapper {
-  margin: 16px;
   padding: 36px;
   max-width: 480px;
   height: 80vh;
