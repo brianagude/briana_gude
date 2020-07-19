@@ -46,3 +46,98 @@ $screen-xxl-min: 1920px !default;
     @warn "Breakpoint mixin supports: mobile-only, small-only, tablet-only, xs, sm, md, lg, xl, xxl";
   }
 }
+
+// margin -------------------------------------------------------------------------------
+@mixin m($value) {
+  margin: $value;
+}
+
+@mixin my($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+
+@mixin mt($value) {
+  margin-top: $value;
+}
+
+@mixin mb($value) {
+  margin-bottom: $value;
+}
+
+@mixin mx($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
+@mixin mr($value) {
+  margin-right: $value;
+}
+
+@mixin ml($value) {
+  margin-left: $value;
+}
+
+// padding -------------------------------------------------------------------------------
+@mixin p($value) {
+  padding: $value;
+}
+
+@mixin py($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin pt($value) {
+  padding-top: $value;
+}
+
+@mixin pb($value) {
+  padding-bottom: $value;
+}
+
+@mixin px($value) {
+  padding-left: $value;
+  padding-right: $value;
+}
+
+@mixin pr($value) {
+  padding-right: $value;
+}
+
+@mixin pl($value) {
+  padding-left: $value;
+}
+
+
+.mobile-only, 
+%mobile-only {
+  @include breakpoint (xs){ display: none; }
+}
+
+.small-only, 
+%small-only {
+  @include breakpoint (sm) { display: none; }
+}
+
+.desktop-only, 
+%desktop-only {
+  @include breakpoint (small-only) { display: none; }
+}
+
+// mixins -------------------------------------------------------------------------------
+@mixin border {
+  border: 12px $black solid;
+}
+
+@mixin border-x {
+  border-top: 4px $black solid;
+  border-bottom: 4px $black solid;
+}
+
+@mixin center($direction:row) {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: $direction;
+}

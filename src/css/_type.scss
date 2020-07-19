@@ -35,3 +35,41 @@ small {
   text-transform: uppercase;
 }
 
+// text effect 
+
+// colors
+
+// pinks
+// $color-1: #f92a80;
+// $color-2: #ef798a;
+// $color-3: #f7d1e1;
+// $color-4: #ff84b7;
+
+// og
+$color-1: #ef798a;
+$color-2: #f92a80;
+$color-3: #f1d302;
+$color-4: #235789;
+
+// blu-green
+// $color-1: #ecff20;
+// $color-2: #3fb2e0;
+// $color-3: #eafeca;
+// $color-4: #13a155;
+
+// orange-crush
+// $color-1: #f8a561;
+// $color-2: #fe856a;
+// $color-3: #f1dcc8;
+// $color-4: #e4f7cc;
+
+span {
+  transition: color 15s;
+  &:hover {transition: 0s; }
+
+  &:nth-child(1n):hover { color: $color-1; }
+  &:nth-child(2n):hover { color: $color-2; }
+  &:nth-child(4n + 1):hover { color: $color-3; }
+  &:nth-child(5n):hover { color: $color-4; }
+}
+
