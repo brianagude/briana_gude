@@ -10,7 +10,7 @@
     })
   }
 
-  makeSpans('p, h1, h2')
+  
 
   function randomPageClass(){
     const pageClasses = [
@@ -29,8 +29,10 @@
     document.body.classList.add(randomClass);
   }
 
-randomPageClass()
-
+window.addEventListener('load', function () {
+  makeSpans('p, h1, h2')
+  randomPageClass()
+})
 
 
     
