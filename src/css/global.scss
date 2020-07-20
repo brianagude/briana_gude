@@ -92,6 +92,7 @@
       &::-webkit-scrollbar { display: none; }
 
       border: solid 10px $color-4;
+      background-color: transparentize($color-4, 0.90);
       box-sizing: border-box;
       padding: 1rem;
 
