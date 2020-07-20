@@ -1,38 +1,37 @@
-  // text effect
-  const makeSpans = selector => {
-    const [...elements] = document.querySelectorAll(selector)
-    return elements.map(element => {
-      const text = element.innerText.split('')
-      const spans = text
-        .map(letter => '<span>' + letter + '</span>')
-        .join('')
-      return element.innerHTML = spans
-    })
-  }
+// text effect ---------------------------------------------------------------------------------
 
-  
+const makeSpans = selector => {
+  const [...elements] = document.querySelectorAll(selector)
+  return elements.map(element => {
+    const text = element.innerText.split('')
+    const spans = text
+      .map(letter => '<span>' + letter + '</span>')
+      .join('')
+    return element.innerHTML = spans
+  })
+}
 
-  function randomPageClass(){
-    const pageClasses = [
-      'pinks',
-      'orange-crush',
-      'blue-green',
-      'og',
-    ]
+// theme changer ---------------------------------------------------------------------------------
 
-    // const body = document.querySelector('.wrapper');
-    const randomIndex = Math.floor(Math.random() * pageClasses.length);
-    const randomClass = pageClasses[randomIndex];
+function randomPageClass(){
+  const pageClasses = [
+    'pinks',
+    'orange-crush',
+    'blue-green',
+    'og',
+  ]
 
-    console.log(randomClass)
+  const randomIndex = Math.floor(Math.random() * pageClasses.length);
+  const randomClass = pageClasses[randomIndex];
 
-    document.body.classList.add(randomClass);
-  }
+  console.log(randomClass)
+  document.body.classList.add(randomClass);
+}
 
-window.addEventListener('load', function () {
+window.onload = function () {
   makeSpans('p, h1, h2, h3')
-  randomPageClass()
-})
+  // randomPageClass()
+}
 
 
     
