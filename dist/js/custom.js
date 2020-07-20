@@ -30,7 +30,7 @@
   }
 
 window.addEventListener('load', function () {
-  makeSpans('p, h1, h2')
+  makeSpans('p, h1, h2, h3')
   randomPageClass()
 })
 
