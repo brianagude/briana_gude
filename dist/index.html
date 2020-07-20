@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Briana Gude</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>briana only makes cool things</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Things Briana Makes">
+    <meta name="keywords" content="developer, briana, gude, front-end">
+    <meta name="author" content="Briana Gude">
 
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/global.css" />
@@ -10,33 +15,58 @@
   </head>
 
   <body>
-    <!-- <canvas class="paintbox"></canvas> -->
     <section class="shapes"></section>
-    <section class="info">
 
-      <h1>hi, i'm briana</h1>
+    <section class="homepage">
+      <div class="container">
+        <div class="info">
 
-      <p> designer & developer based in brooklyn, ny</p>
-      <p> currently working @ thesis </p>
-      <p> creating interactive & thoughtful web-based projects </p>
-      <p> learned to code via superhi ~ </p>
+          <h1>hi, i'm briana</h1>
+          <p> designer & developer based in brooklyn, ny</p>
+          <p> currently working @ thesis </p>
+          <p> creating thoughtfully interactive web-based projects </p>
+          <p> learned to code via superhi ~ </p>
 
-      <nav>
-        <a href="projects.html">projects</a><br>
-        <a href="https://www.superhi.com/?r=brianalauren" , target="_blank">~ superhi</a>
+          <div class='links info-links'>
+            <!-- <a href="projects.html">projects</a><br> -->
+            <a href="#projects">projects</a>
+            <a href="https://www.superhi.com/?r=brianalauren" , target="_blank">~ superhi</a>
+            <br>
+            <a href="mailto:briana.gude@gmail.com?subject=Hi Bri!">email</a>
+            <a href="https://www.instagram.com/brianagude/" , target="_blank">instagram</a>
+            <a href="https://github.com/brianagude" , target="_blank">github</a>
+            <a href="https://www.linkedin.com/in/brianagude/" , target="_blank">linkedin</a>
+          </div>
+        </div>
 
-        <br><br>
-
-        <a href="mailto:briana.gude@gmail.com?subject=Hi Bri!">email</a><br>
-        <a href="https://www.instagram.com/brianabrianalaurenlauren/" , target="_blank">instagram</a><br>
-        <a href="https://github.com/brianagude" , target="_blank">github</a><br>
-        <a href="https://www.linkedin.com/in/brianagude/" , target="_blank">linkedin</a>
-      </nav>
-      
+        <div class="projects" id='projects'>
+          <h3>projects</h3>
+        
+          <div class="links project-links">
+            <a href="https://quarantinescreens.netlify.com/" , target="_blank">
+              a random movie generator to help you get through quarantini
+            </a>
+            <!-- <a href="https://www.dreamhi.us/" , target="_blank">
+              store & showcase for a creative agency based in atlanta, ga
+            </a> -->
+            <a href="http://www.flyleaf.org" , target="_blank">
+              showcase for a publishing agency based in ny
+            </a>
+            <a href="https://ashleecruz.netlify.com/" , target="_blank">
+              a portfolio for a multidisciplinary designer
+            </a>
+            <a href="https://leaveanote.herokuapp.com/" , target="_blank">
+              anonymous social media platform
+            </a>
+          </div>
+        
+        </div>
+      </div>
     </section>
 
-    <script src="js/texteffect.js"></script>
-    <!-- <script src="js/paintbox.js"></script> -->
+    
+    
+    <script src="js/custom.js"></script>
     <script src="js/matter.min.js"></script>
     <script src="js/matter-wrap.js"></script>
     <script src="js/gravity.js"></script>

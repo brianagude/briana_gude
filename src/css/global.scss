@@ -1,142 +1,141 @@
-// utils
-@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,700i|IBM+Plex+Mono:400,600,600i,700,700i|Source+Code+Pro:400,700,900|Space+Mono:400,700,700i");
+// utils -----------------------------------------------------------------------------------------
+  @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-// 	font-family: 'Source Code Pro', monospace;
-// 	font-family: 'Space Mono', monospace;
-// 	font-family: 'Anonymous Pro', monospace;
-// 	font-family: 'IBM Plex Mono', monospace;
+  $black: #222;
 
-// colors
+  // .orange-crush {
+  //   $color-1: #f8a561;
+  //   $color-2: #fe856a;
+  //   $color-3: #f1dcc8;
+  //   $color-4: #e4f7cc;
+  // }
 
-// pinks
-// $color-1: #f92a80;
-// $color-2: #ef798a;
-// $color-3: #f7d1e1;
-// $color-4: #ff84b7;
+  // .blue-green {
+  //   $color-1: #ecff20;
+  //   $color-2: #3fb2e0;
+  //   $color-3: #eafeca;
+  //   $color-4: #13a155;
+  // }
 
-// og
-$color-1: #ef798a;
-$color-2: #f92a80;
-$color-3: #f1d302;
-$color-4: #235789;
+  // .og {
+  $color-1: #ef798a;
+  $color-2: #f92a80;
+  $color-3: #f1d302;
+  $color-4: #235789;
+  // }
 
-// blu-green
-// $color-1: #ecff20;
-// $color-2: #3fb2e0;
-// $color-3: #eafeca;
-// $color-4: #13a155;
-
-// orange-crush
-// $color-1: #f8a561;
-// $color-2: #fe856a;
-// $color-3: #f1dcc8;
-// $color-4: #e4f7cc;
+  // .pinks {
+  //   $color-1: #f92a80;
+  //   $color-2: #ef798a;
+  //   $color-3: #f7d1e1;
+  //   $color-4: #ff84b7;
+  // }
 
 
-// page styles
 
-body {
-  font-family: "Anonymous Pro", monospace;
-  font-size: 24px;
-  cursor: crosshair;
+// homepage --------------------------------------------------------------------------------------
+  html { font-size: 16px; }
 
-  // -webkit-touch-callout: none;
-  //   -webkit-user-select: none;
-  //    -khtml-user-select: none;
-  //      -moz-user-select: none;
-  //       -ms-user-select: none;
-  //           user-select: none;
-
-  @media (max-width: 350px){
-    font-size: 22px;
+  body {
+    font-family: 'Anonymous Pro', monospace;
+    color: $black;
+    line-height: 1.2;
   }
-}
 
-a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
+  p { letter-spacing: 0.75px; }
 
-  &:hover { text-decoration: underline; }
-}
+  p + p { margin-top: 1rem;}
 
-p { font-weight: 300; }
-h2 { font-size: 32px; }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
 
-h1 { 
-  font-size: 40px;
-  margin-top: 24px;
-}
-
-p,
-nav {
-  margin-bottom: 24px;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: bolder;
-  margin-bottom: 36px;
-}
-
-.info, .projects {
-  padding: 0 32px;
-  max-width: 384px;
-  max-height: 100vh;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center; 
-
-  text-align: right;
-
-  @media (max-width: 700px){
-    width: 100vw;
-    height: 100vw;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: none; 
+    margin-bottom: 1rem;
   }
-}
 
-.links a {
-  display: block;
-  margin-bottom: 16px;
-  text-decoration: underline;
-}
+  h3 {
+    font-size: 2rem; 
+    font-weight: 700;
+    line-height: 1.2;
+  }
 
-// text effect
-span {
-  transition: color 15s;
-  &:hover {transition: 0s; }
+  a {
+    color: $black;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-decoration: none; 
+    display: block;
+    font-weight: 700;
 
-  &:nth-child(1n):hover { color: $color-1; }
-  &:nth-child(2n):hover { color: $color-2; }
-  &:nth-child(4n + 1):hover { color: $color-3; }
-  &:nth-child(5n):hover { color: $color-4; }
-}
+    &:hover { text-decoration: underline; }
+    &:nth-of-type(1n):hover { color: $color-1; }
+    &:nth-of-type(2n):hover { color: $color-2; }
+    &:nth-of-type(4n + 1):hover { color: $color-3; }
+    &:nth-of-type(5n):hover { color: $color-4; }
+  }
+  
+  .homepage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 26.25rem;
+    padding: 1rem;
 
-// @media (max-width: 768px) {
-//   .shapes { display: none; }
-// }
+    .container {
+      overflow: scroll;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar { display: none; }
 
-// @media (min-width: 768px) {
-//   .paintbox { display: none; }
-// }
+      border: solid 4px $color-3;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 1rem;
 
-// .paintbox {
-//   background: pink;
-//   // position: fixed;
-//   // top: 0;
-//   // left: 0;
-//   // height: 100vh;
-//   // width: 100vw;
-// }
+      height: 80vh;
+      max-height: 27.75rem;
 
+      div + div { margin-top: 2rem; }
+    }
+  }
+
+  .info {
+    text-align: right;
+  }
+
+  .projects {
+    min-height: 25.625rem;
+    a + a { margin-top: 1rem; }
+  }
+
+  .links {
+    margin-top: 1.2rem;
+  }
+
+  span {
+    transition: color 15s;
+    &:hover {transition: 0s; }
+
+    &:nth-child(1n):hover { color: $color-1; }
+    &:nth-child(2n):hover { color: $color-2; }
+    &:nth-child(4n + 1):hover { color: $color-3; }
+    &:nth-child(5n):hover { color: $color-4; }
+  }
+
+// media queries ---------------------------------------------------------------------------------
+  @media (min-width: 425px){
+    html { font-size: 20px; }
+  }
+
+  @media (min-width: 1400px){
+    html { font-size: 24px; }
+  }
+
+  @media (min-width: 1800px){
+    html { font-size: 32px; }
+  }
 

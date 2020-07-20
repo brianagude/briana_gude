@@ -1,11 +1,12 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var cleanCss = require("gulp-clean-css");
-var sourcemaps = require("gulp-sourcemaps");
-var browserSync = require("browser-sync").create();
-var imagemin = require("gulp-imagemin");
-var del = require("del");
-var runSequence = require("run-sequence");
+var 
+  gulp = require("gulp"),
+  sass = require("gulp-sass"),
+  cleanCss = require("gulp-clean-css"),
+  sourcemaps = require("gulp-sourcemaps"),
+  browserSync = require("browser-sync").create(),
+  imagemin = require("gulp-imagemin"),
+  del = require("del"),
+  runSequence = require("run-sequence");
 
 sass.compiler = require("node-sass");
 
