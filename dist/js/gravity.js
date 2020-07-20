@@ -79,7 +79,8 @@ const bigBall = Bodies.circle(w / 2, h / 2, Math.min(w / 4, h / 4), {
 })
 
 const wall = { isStatic: true, render: { visible: false } }
-const ground = Bodies.rectangle(w / 2, h + 50, w + 100, 100, wall)
+// const ground = Bodies.rectangle(w / 2, h + 50, w + 100, 100, wall)
+const ground = Bodies.rectangle(w / 2, h + 200, w + 100, 100, wall)
 const ceiling = Bodies.rectangle(w / 2, -50, w + 100, 100, wall)
 const leftWall = Bodies.rectangle(-50, h / 2, 100, h + 100, wall)
 const rightWall = Bodies.rectangle(w + 50, h / 2, 100, h + 100, wall)
