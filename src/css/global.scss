@@ -34,7 +34,10 @@
 
 
 // homepage --------------------------------------------------------------------------------------
-  html { font-size: 16px; }
+  html { 
+    font-size: 16px; 
+    scroll-behavior: smooth;
+  }
 
   body {
     font-family: 'Anonymous Pro', monospace;
@@ -58,6 +61,12 @@
     font-size: 2rem; 
     font-weight: 700;
     line-height: 1.2;
+  }
+
+
+  .info-links a {
+    width: max-content;
+    margin-left: auto;
   }
 
   a {
@@ -121,6 +130,26 @@
 
   .links {
     margin-top: 1.2rem;
+  }
+
+  li {
+    position: relative;
+    margin-top: 16px;
+    padding-left: 24px; 
+
+    &:before {
+      content: '>';
+      font-size: 24px;
+      font-weight: 700;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-of-type(1) a:hover { color: $color-1; }
+    &:nth-of-type(2) a:hover { color: $color-2; }
+    &:nth-of-type(3) a:hover { color: $color-3; }
+    &:nth-of-type(4) a:hover { color: $color-4; }
   }
 
   span {
