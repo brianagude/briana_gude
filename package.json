@@ -14,7 +14,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "imagemin": "^6.1.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "run-sequence": "^2.2.1"
   },
   "scripts": {
